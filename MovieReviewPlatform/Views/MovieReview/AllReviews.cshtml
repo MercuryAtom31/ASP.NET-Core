@@ -1,0 +1,27 @@
+﻿@model List<MovieReviewPlatform.Models.Movie>
+
+<h2>All Reviews</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Director</th>
+            <th>Release Year</th>
+            <th>Rating</th>
+            <th>Review</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var review in Model)
+        {
+            <tr>
+                <td>@review.Title</td>
+                <td>@review.Director</td>
+                <td>@review.ReleaseYear</td>
+                <td>@review.Rating</td>
+                <td>@review.Review</td>
+            </tr>
+        }
+    </tbody>
+</table>
