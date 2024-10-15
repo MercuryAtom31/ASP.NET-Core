@@ -1,0 +1,25 @@
+﻿@model Album
+
+<h1>@Model.Name</h1>
+
+<h2>Review</h2>
+
+@if (Model.Reviews.Count > 0)
+{
+	<ul>
+		@foreach (var review in Model.Reviews)
+		{
+			<li>@review</li>
+		}
+	</ul>
+}
+else
+{
+	<p>No reviews yet.</p>
+}
+
+<a asp-controller="Albums"
+	asp-action="Review"
+	asp-route-id="@Model.Id">
+	Write a Review
+</a>
